@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "OZoXuD+JBVi/Eh/CGJEg3ahSRsFIEFN96RbKtlSfvBxk443YlVgY1pgwpTF1G+O4Ax2TrFw7tnqlYM1cLO/jTQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\vukia\\Desktop\\SOA proj\\Projekat\\Tudjo\\Slavko Petrovic\\Projekat\\Application\\helper_app\\helper_app.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vukia\\.nuget\\packages\\csvhelper\\27.2.1\\csvhelper.27.2.1.nupkg.sha512",
+    "C:\\Users\\vukia\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

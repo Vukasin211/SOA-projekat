@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package greet;
+
+service Greeter {
+    rpc Notify(Request) returns (Reply);
+}
+
+message Request{
+    int32 currencyId =1;
+    string title = 2;
+    string currency = 3;
+    float value = 4;
+    string data = 5;
+
+}
+
+message Reply{
+    string text = 1;
+}

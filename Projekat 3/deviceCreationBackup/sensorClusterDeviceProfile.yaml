@@ -1,0 +1,47 @@
+name: "SensorCluster"
+manufacturer: "Raspberry Pi Foundation"
+model: "Raspberry Pi 3b+"
+labels:
+  - "rpi"
+description: "Sensor cluster providing metrics for DC Power ,AC Power and Daily Yield in a solar power plant"
+
+deviceResources:
+  - name: dcPower
+    description: "DC Power in solar power plant"
+    properties:
+      value:
+        {
+          type: "Float64",
+          readWrite: "RW",
+          minimum: "0.0",
+          maximum: "9999999",
+          size: "4",
+          LSB: "true",
+          defaultValue: "0",
+        }
+  - name: acPower
+    description: "AC Power in solar power plant"
+    properties:
+      value:
+        {
+          type: "Float64",
+          readWrite: "RW",
+          minimum: "0.0",
+          maximum: "9999999",
+          size: "4",
+          LSB: "true",
+          defaultValue: "0",
+        }
+  - name: dailyYield
+    description: "Daily Yield in solar power plant"
+    properties:
+      value:
+        {
+          type: "Float64",
+          readWrite: "RW",
+          minimum: "0.0",
+          maximum: "9999999",
+          size: "4",
+          LSB: "true",
+          defaultValue: "0",
+        }

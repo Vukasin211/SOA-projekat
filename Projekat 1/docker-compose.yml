@@ -1,0 +1,46 @@
+services:
+    analytics:
+      build: ./analytics
+      image: analytics
+      ports: 
+        - "5003:5003"
+    database:
+      image: mongo
+      ports:
+        - "27017:27017"
+    database_nodejs:
+      build: ./database_nodejs
+      image: database_nodejs
+      ports:
+        - "3000:3000"     
+    ekuiper:
+      container_name: ekuiper
+      image: "lfedge/ekuiper"
+      ports:
+        - "9081:9081"
+      environment:
+        MQTT_SOURCE__DEFAULT__SERVER: "tcp://broker.emqx.io:1883"
+    mqtt:
+      container_name: mqtt
+      image: eclipse-mosquitto
+      restart: always
+      expose:
+        - "1883"
+        - "9001"
+      ports:
+        - "1883:1883"
+        - "9001:9001"
+    manager:
+      image: emqx/ekuiper-manager
+      container_name: manager
+      ports:
+        - 9082:9082
+    influxdb:
+      image: influxdb
+      environment:
+        - INFLUXDB_ADMIN_ENABLED=true
+        - INFLUXDB_USERNAME=admin
+        - INFLUXDB_PASSWORD=admin123
+      ports:
+        - "8086:8086"
+    
